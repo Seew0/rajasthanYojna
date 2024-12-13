@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css">
+   <link rel="stylesheet" type="text/css" href="/css/owl.theme.default.min.css">
+   <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+   <link rel="stylesheet" type="text/css" href="/css/eprocure-icons.css">
+   <link rel="stylesheet" type="text/css" href="/css/responsive-style.css">
+   <link rel="stylesheet" type="text/css" href="/css/spry-tabbed-panels.css">
+   <link rel="stylesheet" type="text/css" href="/css/daterange-picker.css">
+   <link rel="stylesheet" type="text/css" href="/css/easyui.css">
+   <link rel="stylesheet" type="text/css" href="/css/style.css">
+   <link rel="stylesheet" type="text/css" href="/css/style-new.css">
+   <link rel="stylesheet" type="text/css" href="/css/blue.css">
+</head>
+<style>
+   @media only screen and (max-width:600px) {
+      .box-locs {
+         overflow-y: scroll
+      }
+
+      .kata {
+         width: 100%;
+         margin: 0 auto
+      }
+
+      .display-none {
+         display: none !important
+      }
+
+      .sach {
+         position: fixed;
+         top: 90%;
+         left: 5%
+      }
+
+      .kach {
+         background-color: #fff
+      }
+
+      .kach a {
+         width: 90%;
+         z-index: 99
+      }
+
+      .border-right {
+         border-right: none !important
+      }
+
+      .kata {
+         width: 100% !important
+      }
+
+      .small-screen {
+         position: absolute !important;
+         z-index: 1 !important
+      }
+   }
+
+   body {
+      overflow-x: hidden
+   }
+
+   .modal-body img {
+      display: block;
+      margin: 0 auto
+   }
+
+   .blue_table th {
+      text-align: center
+   }
+
+   .blue_table tr td {
+      text-align: center
+   }
+
+   .lack {
+      background: #fff;
+      margin: 0 auto;
+      padding: 11px;
+      margin-top: 10px
+   }
+
+   .kata {
+      width: 100%;
+      margin: 50px auto
+   }
+
+   .gaggu .fa {
+      margin-right: 10px !important
+   }
+
+   .caption {
+      font-weight: 600
+   }
+
+   .text-center {
+      text-align: center !important
+   }
+
+   .table {
+      color: #686868
+   }
+
+   .w-20 {
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+      margin-top: 20px;
+      width: 100%
+   }
+
+   .form-z {
+      margin-bottom: 50px
+   }
+
+   .prjt-title {
+      padding: 20px 0
+   }
+
+   .box-content {
+      border: 1px solid #efefef;
+      border-radius: 5px;
+      padding: 30px
+   }
+
+   .start-content {
+      text-transform: uppercase
+   }
+
+   .padding-30px {
+      padding: 30px
+   }
+
+   .tabs {
+      background: 0 0 !important
+   }
+
+   .active a {
+      border-bottom: 3px solid #4285f4 !important;
+      border-top: none !important
+   }
+
+   .gaggu li {
+      list-style: none;
+      line-height: 2.5em;
+      font-size: 13px
+   }
+
+   .display-inline-b {
+      display: inline-block !important;
+      margin-right: 50px !important
+   }
+
+   .gaggu li a {
+      border: none !important
+   }
+
+   .border-right {
+      border-right: 1px solid #e3e3e3
+   }
+
+   .inner-content {
+      box-shadow: 1px 1px 8px rgb(0 0 0 / 41%);
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 60px
+   }
+
+   .fa {
+      color: #4285f4 !important
+   }
+
+   .inline {
+      padding: 0
+   }
+
+   .inline li {
+      display: inline;
+      list-style: none;
+      padding: 5px;
+      color: #e3e3e3
+   }
+
+   .inline li a {
+      color: #909090
+   }
+
+   .footer {
+      display: flex;
+      justify-content: space-around;
+      text-align: center
+   }
+
+   .button-primary {
+      color: #fff;
+      background-color: #4285f4 !important;
+      border-color: #4285f4 !important;
+      outline-offset: 0 !important
+   }
+
+   .kata {
+      width: 50%
+   }
+
+   select {
+      background: #fff
+   }
+
+   .checkbox-col {
+      display: flex;
+      justify-content: space-between
+   }
+
+   .lsts {
+      list-style: decimal;
+      line-height: 2em
+   }
+
+   .lsts li {
+      margin-bottom: 5px
+   }
+</style>
+
+<!-- End Meta Pixel Code -->
+<style>
+   .kaka {
+      font-weight: 800;
+   }
+
+   .mt-3 {
+      margin-top: 10px;
+   }
+
+   .blinked {
+      animation: blinker 1s linear infinite;
+   }
+
+   @keyframes blinker {
+      50% {
+         opacity: 0;
+      }
+   }
+</style>
+
+<body>
+   <header>
+      <div class="small-top-bar" style="background:#e6908d">
+         <div class="container">
+            <div class="pull-left"></div>
+            <div class="pull-right"><span>-</span></div>
+         </div>
+      </div>
+      <div class="container navbar-wrapper-main">
+         <div class="row">
+            <div class="col-sm-12">
+               <nav class="navbar">
+                  <div class="navigation-bar-wrap">
+                     <div class="nav-logo mr-auto">
+                        <div class="logo-client" id="xSiteLogoImgDiv"><a class="client-logo-wrapper" href="/"><img
+                                 id="xSiteLogoImg" src="../assets/logo.jpg" class="single-client-logo"></a></div>
+                     </div>
+                     <div class="collapse navbar-collapse w-100 small-screen" id="myNavbar">
+                        <ul class="menu">
+                           <li class="hvr-underline-from-center"><a href="/">🏠︎ Home</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </header>
+   <div class="x-min-height before-login-container">
+      <div class="container">
+         <div class="">
+            <form class="kata" id="registrationForm" method="POST">
+               <h3>FORM</h3>
+               <input type="hidden" name="amount" value="1.00">
+               <input type="hidden" name="currency" value="INR">
+               <input type="hidden" name="tid" id="tid" readonly value="1681930193668">
+               <input type="hidden" name="order_id" value="964495098885">
+               <input type="hidden" name="merchant_id" value="2090405">
+               <input type="hidden" name="project_name" value="OZONECITY2">
+
+               <div class="row">
+                  <div class="col-md-12 col-sm-12 col-12">
+                     <div class="form-group">
+                        <label>Applicant Name</label>
+                        <input type="text" class="contact-formw3ls form-control" name="userName" id="userName"
+                           placeholder="Enter Name" required>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12 col-sm-12 col-12 display-flex" style="display: inline-flex;">
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                           value="Son">
+                        <label class="form-check-label" for="inlineRadio1">Son</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                           value="Wife">
+                        <label class="form-check-label" for="inlineRadio2">Wife</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                           value="Daughter">
+                        <label class="form-check-label" for="inlineRadio3">Daughter</label>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12 col-sm-12 col-12">
+                     <div class="form-group">
+                        <input type="text" class="contact-formw3ls form-control" name="sonOf" id="sonOf"
+                           placeholder="Son/Wife/Daughter">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-6 col-sm-12 col-xs-12 col-6 d-inline-block">
+                     <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" class="contact-formw3ls form-control" name="userPhone" id="userPhone"
+                           placeholder="98xxxxxx88" pattern="[0-9]{10}" required>
+                     </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 col-xs-12 col-6 d-inline-block">
+                     <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="contact-formw3ls form-control" name="userEmail" id="userEmail"
+                           placeholder="example@example.com" required>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12 col-sm-12 col-12">
+                     <div class="form-group">
+                        <label>Aadhaar Card Number</label>
+                        <input type="text" class="contact-formw3ls form-control" name="userAdhar" id="userAdhar"
+                           placeholder="xxxx-xxxx-xxxx" pattern="[0-9]{12}" required>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12 col-sm-12 col-12">
+                     <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" class="contact-formw3ls form-control" name="userAddress" id="userAddress"
+                           required>
+                     </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-12 col-xs-12 col-4 d-inline-block">
+                     <div class="form-group">
+                        <label>City</label>
+                        <input type="text" class="contact-formw3ls form-control" name="userCity" id="userCity" required>
+                     </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-12 col-xs-12 col-4 d-inline-block">
+                     <div class="form-group">
+                        <label>Pincode</label>
+                        <input type="text" class="contact-formw3ls form-control" name="userPincode" id="userPincode"
+                           required>
+                     </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-12 col-xs-12 col-4 d-inline-block">
+                     <div class="form-group">
+                        <label>State</label>
+                        <input type="text" class="contact-formw3ls form-control" name="userState" id="userState"
+                           required>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12 col-sm-12 col-12">
+                     <div class="form-group">
+                        <label>Quota</label>
+                        <select name="userQuota" class="contact-formw3ls form-control" required>
+                           <option value="">Select Quota</option>
+                           <option value="Govt Employee">Govt Employee</option>
+                           <option value="33 % Female Quota">33% Female Quota</option>
+                           <option value="General Quota">General Quota</option>
+                        </select>
+                     </div>
+                  </div>
+
+                  <div class="col-md-12 col-sm-12 col-12">
+                     <div class="form-group">
+                        <label>Select Size</label>
+                        <select name="userSize" class="contact-formw3ls form-control" id="size" required>
+                           <option value="">Select Size</option>
+                           <option value="21000">
+                              1 BHK (654 SQ.FT.) Registration Amount Rs. 21000
+                           </option>
+                           <option value="21000">
+                              2 BHK (1014 SQ.FT.) Registration Amount Rs. 21000
+                           </option>
+                           <option value="3 BHK (1300 SQ.FT.) Registration Amount Rs. 21000">
+                              3 BHK (1300 SQ.FT.) Registration Amount Rs. 21000
+                           </option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12 col-sm-12 col-12">
+                     <div class="form-group checkbox-col">
+                        <span class="button-checkbox">
+                           <input type="checkbox" class="btn data-color" tabindex="7" required>
+                        </span>
+                        <p>By clicking the checkbox, you agree to the
+                           <a target="_blank" href="./privacy.html">Shipping Policy</a> and
+                           <a target="_blank" href="./contactUs.html">Contact Us</a>.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <button type="submit" name="onlineRegistration" class="btn submit contact-submit buy_now"
+                  style="font-weight: 800; font-size: 20px;">Submit & Pay</button>
+            </form>
+         </div>
+      </div>
+
+      <script>
+         var options = {
+            "key": 'rzp_test_H4EEHztWJP2gpn', // Enter the Key ID generated from the Dashboard
+            "amount": 2100000,
+            "currency": "INR",
+            "description": "Acme Corp",
+            "image": "./assets/img/logo.png",
+            config: {
+               display: {
+                  blocks: {
+                     banks: {
+                        name: 'Most Used Methods',
+                        instruments: [
+                           {
+                              method: 'wallet',
+                              wallets: ['freecharge'] 
+                           },
+                           {
+                              method: 'upi'
+                           },
+                        ],
+                     },
+                  },
+                  sequence: ['block.banks'],
+                  preferences: {
+                     show_default_blocks: true,
+                  },
+               },
+            },
+            "handler": function (response) {
+               alert("payment completed");
+               (async () => {
+                  // Get the form element explicitly
+                  const formElement = document.getElementById('registrationForm');
+
+                  // Ensure the form exists
+                  if (!formElement) {
+                     console.error('Form element not found');
+                     return;
+                  }
+
+                  const formData = new FormData(formElement);
+
+                  // Convert FormData to a plain object
+                  const formObject = {};
+                  formData.forEach((value, key) => {
+                     formObject[key] = value;
+                  });
+
+                  try {
+                     const response = await fetch('http://localhost:3000/api/form/addData', {
+                        method: 'POST',
+                        headers: {
+                           'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formObject),
+                     });
+
+                     const result = await response.json();
+
+                     if (response.ok) {
+                        // Handle success (e.g., show a success message, redirect, etc.)
+                        alert("Form submitted successfully");
+                        console.log('Form submitted successfully:', result);
+                     } else {
+                        // Handle error (e.g., show an error message)
+                        console.error('Form submission failed:', result);
+                     }
+                  } catch (error) {
+                     console.error('Error during form submission:', error);
+                  }
+               })();
+            },
+            "modal": {
+               "ondismiss": function () {
+                  if (confirm("Are you sure, you want to close the form?")) {
+                     console.log("Checkout form closed by the user");
+                  } else {
+                     console.log("Complete the Payment");
+                  }
+               }
+            }
+         };
+         
+         document.getElementById('registrationForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            // Prevent the default form submission
+            const formData = new FormData(this);
+
+            // Convert FormData to a plain object
+            const formObject = {};
+            formData.forEach((value, key) => {
+               formObject[key] = value;
+            });
+
+            const response = await fetch('http://localhost:3000/api/form/checkDuplicacy', {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json',
+               },
+               body: JSON.stringify(formObject),
+            });
+
+            const result = await response.json();
+
+            if (response.status === 500) {
+               console.log('Duplicate Entry:', result);
+               alert("Applicants can use Emails, PhoneNumber and Aadhaar Card Number only once");
+            } else if (response.status === 200) {
+               var rzp = new Razorpay(options);
+               rzp.open();
+            }
+         });
+      </script>
+</body>
+
+</html>

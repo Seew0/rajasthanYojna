@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="google-site-verification" content="SvUXWZqu9ul7Cqj1W2rJRhcnXmGAlFGEDyen0ACY-L8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <meta name="Description"
+      content="Reverse Auction, Forward Auction, Request For Quotation, E - Procurement, Online Procurement">
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>PLACEHOLDER</title>
+   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css">
+   <link rel="stylesheet" type="text/css" href="/css/owl.theme.default.min.css">
+   <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+   <link rel="stylesheet" type="text/css" href="/css/eprocure-icons.css">
+   <link rel="stylesheet" type="text/css" href="/css/responsive-style.css">
+   <link rel="stylesheet" type="text/css" href="/css/spry-tabbed-panels.css">
+   <link rel="stylesheet" type="text/css" href="/css/daterange-picker.css">
+   <link rel="stylesheet" type="text/css" href="/css/easyui.css">
+   <link rel="stylesheet" type="text/css" href="/css/style.css">
+   <link rel="stylesheet" type="text/css" href="/css/style-new.css">
+   <link rel="stylesheet" type="text/css" href="/css/blue.css">
+   <link rel="icon" id="feviconId" type="image/*" sizes="128x128">
+</head>
+<style>
+   @media only screen and (max-width:600px) {
+      .box-locs {
+         overflow-y: scroll
+      }
+
+      .kata {
+         width: 100%;
+         margin: 0 auto
+      }
+
+      .display-none {
+         display: none !important
+      }
+
+      .sach {
+         position: fixed;
+         top: 90%;
+         left: 5%
+      }
+
+      .kach {
+         background-color: #fff
+      }
+
+      .kach a {
+         width: 90%;
+         z-index: 99
+      }
+
+      .border-right {
+         border-right: none !important
+      }
+
+      .kata {
+         width: 100% !important
+      }
+
+      .small-screen {
+         position: absolute !important;
+         z-index: 1 !important
+      }
+   }
+
+   body {
+      overflow-x: hidden
+   }
+
+   .scheme-container {
+      display: flex;
+      /* Enables flexbox for layout */
+      flex-wrap: wrap;
+      /* Allows wrapping to the next line */
+      justify-content: space-between;
+      /* Even spacing between items */
+      /* Spacing between rows and columns */
+   }
+
+   #profile-grid .profile {
+      flex: 0 1 calc(23%);
+      /* Each item takes roughly 23% of the row width */
+      max-width: calc(23%);
+      /* Ensures consistent width */
+      box-sizing: border-box;
+      /* Includes padding and border in width */
+   }
+
+   .panel-thumbnail img {
+      width: 100%;
+      /* Images fill their containers */
+      height: auto;
+      /* Maintains image aspect ratio */
+      border-radius: 8px;
+      /* Optional: Rounded corners */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      /* Optional: Shadow for aesthetics */
+   }
+
+
+   .modal-body img {
+      display: block;
+      margin: 0 auto
+   }
+
+   .blue_table th {
+      text-align: center
+   }
+
+   .blue_table tr td {
+      text-align: center
+   }
+
+   .lack {
+      background: #fff;
+      margin: 0 auto;
+      padding: 11px;
+      margin-top: 10px
+   }
+
+   .kata {
+      width: 100%;
+      margin: 50px auto
+   }
+
+   .gaggu .fa {
+      margin-right: 10px !important
+   }
+
+   .caption {
+      font-weight: 600
+   }
+
+   .text-center {
+      text-align: center !important
+   }
+
+   .table {
+      color: #686868
+   }
+
+   .w-20 {
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+      margin-top: 20px;
+      width: 100%
+   }
+
+   .form-z {
+      margin-bottom: 50px
+   }
+
+   .prjt-title {
+      padding: 20px 0
+   }
+
+   .box-content {
+      border: 1px solid #efefef;
+      border-radius: 5px;
+      padding: 30px
+   }
+
+   .start-content {
+      text-transform: uppercase
+   }
+
+   .padding-30px {
+      padding: 30px
+   }
+
+   .tabs {
+      background: 0 0 !important
+   }
+
+   .active a {
+      border-bottom: 3px solid #4285f4 !important;
+      border-top: none !important
+   }
+
+   .gaggu li {
+      list-style: none;
+      line-height: 2.5em;
+      font-size: 13px
+   }
+
+   .display-inline-b {
+      display: inline-block !important;
+      margin-right: 50px !important
+   }
+
+   .gaggu li a {
+      border: none !important
+   }
+
+   .border-right {
+      border-right: 1px solid #e3e3e3
+   }
+
+   .inner-content {
+      box-shadow: 1px 1px 8px rgb(0 0 0 / 41%);
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 60px
+   }
+
+   .fa {
+      color: #4285f4 !important
+   }
+
+   .inline {
+      padding: 0
+   }
+
+   .inline li {
+      display: inline;
+      list-style: none;
+      padding: 5px;
+      color: #e3e3e3
+   }
+
+   .inline li a {
+      color: #909090
+   }
+
+   .footer {
+      display: flex;
+      justify-content: space-around;
+      text-align: center
+   }
+
+   .button-primary {
+      color: #fff;
+      background-color: #4285f4 !important;
+      border-color: #4285f4 !important;
+      outline-offset: 0 !important
+   }
+
+   .kata {
+      width: 50%
+   }
+
+   select {
+      background: #fff
+   }
+
+   .checkbox-col {
+      display: flex;
+      justify-content: space-between
+   }
+
+   .lsts {
+      list-style: decimal;
+      line-height: 2em
+   }
+
+   .lsts li {
+      margin-bottom: 5px
+   }
+</style>
+
+<style>
+   .kaka {
+      font-weight: 800;
+   }
+
+   .mt-3 {
+      margin-top: 10px;
+   }
+
+   .blinked {
+      animation: blinker 1s linear infinite;
+   }
+
+   @keyframes blinker {
+      50% {
+         opacity: 0;
+      }
+   }
+
+   .scheme-container {
+      display: flex;
+      /* Enables flexbox for layout */
+      flex-wrap: wrap;
+      /* Allows wrapping to the next line */
+      justify-content: space-between;
+      /* Even spacing between items */
+      gap: 20px;
+      /* Spacing between rows and columns */
+   }
+
+   #profile-grid .profile {
+      flex: 0 1 calc(23%);
+      /* Each item takes roughly 23% of the row width */
+      max-width: calc(23%);
+      /* Ensures consistent width */
+      box-sizing: border-box;
+      /* Includes padding and border in width */
+   }
+
+   .panel-thumbnail img {
+      width: 100%;
+      /* Images fill their containers */
+      height: auto;
+      /* Maintains image aspect ratio */
+      border-radius: 8px;
+      /* Optional: Rounded corners */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      /* Optional: Shadow for aesthetics */
+   }
+</style>
+
+<body>
+   <header>
+      <div class="small-top-bar" style="background:#e6908d">
+         <div class="container">
+            <div class="pull-left"></div>
+            <div class="pull-right"><span>-</span></div>
+         </div>
+      </div>
+      <div class="container navbar-wrapper-main">
+         <div class="row">
+            <div class="col-sm-12">
+               <nav class="navbar">
+                  <div class="navigation-bar-wrap">
+                     <div class="nav-logo mr-auto">
+                        <div class="logo-client" id="xSiteLogoImgDiv"><a class="client-logo-wrapper" href="/"><img
+                                 id="xSiteLogoImg" src="../assets/logo.jpg" class="single-client-logo"></a></div>
+                     </div>
+                     <div class="collapse navbar-collapse w-100 small-screen" id="myNavbar">
+                        <ul class="menu">
+                           <li class="hvr-underline-from-center"><a href="/"><i aria-hidden="true"></i>🏠︎Home</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </header>
+   <div class="x-min-height before-login-container">
+      <div class="container">
+         <div class="slt">
+            <div class="card"
+               style="min-height: 600px;background:#fff; box-shadow:0px 0px 1px 0px #bab8b8;margin:30px 0; border-top:3px solid #4285f4;">
+               <div class="padding-30px">
+                  <div id="project_scheme" class="start-content">
+                     <div class="goback"
+                        style="border-bottom: 1px solid #efefef;display: flex;align-items: center;justify-content: space-between;">
+                        <h3 class="prjt-title">Project Scheme Information</h3>
+                        <a style="margin-top: 20px;" href="/">
+                           << Go Back</a>
+                     </div>
+                     <div class="box-content " style="margin-bottom: 60px;">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Town & District<span
+                                       class="floatright colsanset">:</span> </label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">
+                                       Khairthal - Tijara</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Town
+                                    <span class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">
+                                       BHIWADI</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Project Name & File ID<span
+                                       class="floatright colsanset">:</span> </label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">TERRA CASTLE</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Colonizer Name<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">TERA CASTLE PVT LTD.</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">COLONIZER’S CONTACT DETAIL<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">
+                                       PLOT NO 190, PHASE IV UDYOG VIHAR SECTOR 18 GURGAON.
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">CONTACT NO.<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">9811206565
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <div class="form-z">
+                                 <label class="control-label col-sm-3 caption">Project Name<span
+                                       class="floatright colsanset">:</span> </label>
+                                 <div class="col-sm-9">
+                                    <label class="control-label">OPENING WINDOW OF TERRA CASTLE READY TO MOVE HIGHRISE
+                                       APARTMENTS BANG ON 60 MTR MAIN BHIWADI-ALWAR HIGHWAY.</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <div class="form-z">
+                                 <label class="control-label col-sm-3 caption">Project Description<span
+                                       class="floatright colsanset">:</span> </label>
+                                 <div class="col-sm-9">
+                                    <label class="control-label">
+                                       PROJECT NAME – TERRA CASTLE DEVELOPED BY – TERRA REALCON PVT. LTD. OPENING WINDOW
+                                       OF 21 AFFORDABLE HIGHRISE APARTMENTS ONLY UNDER CHIEF MINISTER JAN AWAS YOJANA
+                                       2015 ARE AVAILABLE FOR REGISTRATION IN TERRA CASTLE HIGHRISE APARTMENTS SPREAD IN
+                                       10 ACRES ON MAIN BHIWADI-ALWAR HIGHWAY BHIWADI.
+                                       <br><br>
+                                       <!-- <b>
+                                    NOTE: "IF OPTING PMAY CATEGORY, THEN IT IS MANDATORY FOR UPLOAD PMAY
+                                    CERTIFICATE OTHERWISE APPLICATION IS LIABLE TO BE REJECTED".
+                                    </b> -->
+                                       <br>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <div class="form-z">
+                                 <label class="control-label col-sm-3 caption">RERA Registration No<span
+                                       class="floatright colsanset">:</span> </label>
+                                 <div class="col-sm-9">
+                                    <label class="control-label">
+                                       RAJ/P/2017/158
+                                       <br><br>
+                                       <!-- <b>
+                                    NOTE: "IF OPTING PMAY CATEGORY, THEN IT IS MANDATORY FOR UPLOAD PMAY
+                                    CERTIFICATE OTHERWISE APPLICATION IS LIABLE TO BE REJECTED".
+                                    </b> -->
+                                       <br>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Total Site Area (in Acres)<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label"> 10</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Scheme Category<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">
+                                       RAJASTHAN JAN AWAS YOJANA</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">SMS alert to Applicant in Wait
+                                    list<span class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label"> Yes</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">SMS alert to allottee's<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">Yes</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Online Application Start Date<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label"> 01-12-2024 10:00</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Online Application End Date &
+                                    Time<span class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">
+                                       01-12-2024 23:59</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Payment Start Date<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">01-12-2024 10:00</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Payment End Date<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">
+                                       15-12-2024 23:59</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Unit allotment Date & Time<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label"> 17-12-2024 18:00</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-z display-flex">
+                                 <label class="control-label col-sm-6 caption">Registration Amount<span
+                                       class="floatright colsanset">:</span></label>
+                                 <div class="col-sm-6">
+                                    <label class="control-label">
+                                       Rs. 21,000/- </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <h4>Note:</h4>
+                           <ul>
+                              <li>"REGISTRATION AMOUNT IS FULLY REFUNDABLE TO NON ALLOTTEES"</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="costsheet" class="start-content">
+                     <h3 class="prjt-title"> Unit Sizes & Cost (Scheme
+                        Payment Plan)
+                     </h3>
+                     <div class="box-content box-locs" style="overflow-y:scroll;">
+
+
+                        <h4>PRICE FOR GOVERNMENT EMPLOYEES & FEMALE APPLICANTS</h4>
+                        <div class="box-content box-locs" style="overflow-y:scroll;">
+                           <table class="table table-bordered blue_table table-responsive table-striped">
+                              <tr>
+                                 <td>No.of Units</td>
+                                 <td>Flat Area<br>
+                                    <span>(Sq.Ft)</span>
+                                 </td>
+                                 <!--<td>Licensed Under</td> -->
+                                 <td>Rate Per<br>
+                                    <span>(Sq.Ft)</span>
+                                 </td>
+                                 <td>Registration Amount<br>
+                                    <span>(Rs)</span>
+                                 </td>
+                                 <td>10% On Allotment(Minus Registration Amount)<br>
+                                    <span>(Rs)</span>
+                                 </td>
+                                 <td>
+                                    90% Within 45 Days From Allotment<br>
+                                    <span>(Rs)</span>
+                                 </td>
+                                 <td>Total Cost<br>
+                                    <span>(Rs)</span>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>4</td>
+                                 <td>654</td>
+                                 <!-- <td>Adinath Properties Pvt.Ltd.</td> -->
+                                 <td>2,000/-</td>
+                                 <td>21,000/-</td>
+                                 <td>1,09,800/-</td>
+                                 <td>11,77,200/-</td>
+                                 <td>13,08,000/-</td>
+                              </tr>
+
+                              <tr>
+                                 <td>8</td>
+                                 <td>1014</td>
+                                 <!-- <td>Adinath Properties Pvt.Ltd.</td> -->
+                                 <td>2,000/-</td>
+                                 <td>21,000/-</td>
+                                 <td>1,81,800/-</td>
+                                 <td>18,25,200/-</td>
+                                 <td>20,28,000/-</td>
+                              </tr>
+                              <tr>
+
+
+                              <tr>
+                                 <td>9</td>
+                                 <td>1300</td>
+                                 <!-- <td>Primoris Properties Pvt.Ltd.</td> -->
+                                 <td>2,000/-</td>
+                                 <td>21,000/-</td>
+                                 <td>2,39,000/-</td>
+                                 <td>23,40,000/-</td>
+                                 <td>26,00,000/-</td>
+                              </tr>
+                              </tr>
+                           </table>
+                           <div class="ksts" style="margin-top:15px;">
+                              <!-- <h5 class="blinked" style="color:red!important">Registration Closed For Unit Size 360.91
+                        Sq.Ft. on First Floor</h5>
+                        <h5 class="blinked" style="color:red!important">Registration Closed For Unit Size 303.72 &
+                        412.74
+                        Sq.Ft. on Second Floor</h5> -->
+                              <h6>No PLC charges for Government Employees & Females</h6>
+                              <h6>No EDC/IDC charges for Government Employees & Females</h6>
+                              <h6>Other Charges applicable as per actual</h6>
+                              <h6>Payment plan is 10:90 for detailed info refer application form</h6>
+                           </div>
+                           <br>
+                           <br>
+                           <br>
+                           <br>
+                           <h4>PRICE FOR OTHER APPLICANTS</h4>
+                           <table class="table table-bordered blue_table table-responsive table-striped">
+                              <tr>
+                                 <td>No.of Units</td>
+                                 <td>Flat Area<br>
+                                    <span>(Sq.Ft)</span>
+                                 </td>
+                                 <!--<td>Licensed Under</td> -->
+                                 <td>Rate Per<br>
+                                    <span>(Sq.Ft)</span>
+                                 </td>
+                                 <td>Registration Amount<br>
+                                    <span>(Rs)</span>
+                                 </td>
+                                 <td>10% On Allotment(Minus Registration Amount)<br>
+                                    <span>(Rs)</span>
+                                 </td>
+                                 <td>
+                                    90% Within 45 Days From Allotment<br>
+                                    <span>(Rs)</span>
+                                 </td>
+                                 <td>Total Cost<br>
+                                    <span>(Rs)</span>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>4</td>
+                                 <td>654</td>
+                                 <!-- <td>Adinath Properties Pvt.Ltd.</td> -->
+                                 <td>2,500/-</td>
+                                 <td>21,000/-</td>
+                                 <td>1,42,500/-</td>
+                                 <td>14,71,500/-</td>
+                                 <td>16,35,000/-</td>
+                              </tr>
+
+                              <tr>
+                                 <td>8</td>
+                                 <td>1014</td>
+                                 <!-- <td>Adinath Properties Pvt.Ltd.</td> -->
+                                 <td>2,500/-</td>
+                                 <td>21,000/-</td>
+                                 <td>2,32,500/-</td>
+                                 <td>22,81,500/-</td>
+                                 <td>25,35,000/-</td>
+                              </tr>
+                              <tr>
+
+
+                              <tr>
+                                 <td>9</td>
+                                 <td>1300</td>
+                                 <!-- <td>Primoris Properties Pvt.Ltd.</td> -->
+                                 <td>2,500/-</td>
+                                 <td>21,000/-</td>
+                                 <td>3,04,000/-</td>
+                                 <td>29,25,000/-</td>
+                                 <td>32,50,000/-</td>
+                              </tr>
+                           </table>
+                           <div class="ksts" style="margin-top:15px;">
+                              <!-- <h5 class="blinked" style="color:red!important">Registration Closed For Unit Size 360.91
+                        Sq.Ft. on First Floor</h5>
+                        <h5 class="blinked" style="color:red!important">Registration Closed For Unit Size 303.72 &
+                        412.74
+                        Sq.Ft. on Second Floor</h5> -->
+                              <h6>PLC & EDC/IDC & Other Charges will be applicable as per actual.</h6>
+                              <h6>Payment plan is 10:90 for detailed info refer application form</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="donwload_section" class="start-content" style="padding: 30px;">
+                     <h3 class="prjt-title">Download Section</h3>
+                     <div class="box-content box-locs">
+                        <table class="table table-bordered table-responsive table-striped">
+                           <thead>
+                              <tr>
+                                 <th>Sr.No.</th>
+                                 <th>Document Type</th>
+                                 <th>Status</th>
+                                 <th>Action</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>1</td>
+                                 <td>Project Cluster Plan</td>
+                                 <td>Approved</td>
+                                 <td><a download="CM AWAS YOJANA Plots Scheme Cluster Plan"
+                                       href="../pdf/projectclusterplan.pdf ">Download</a></td>
+                              </tr>
+                              <tr>
+                                 <td>2</td>
+                                 <td>Scheme Brochure</td>
+                                 <td>Approved</td>
+                                 <td><a download="CM AWAS YOJANA Plots Scheme Brochure"
+                                       href="../pdf/schemabrochure.pdf">Download</a></td>
+                              </tr>
+                              <tr>
+                                 <td>3</td>
+                                 <td>Scheme RERA</td>
+                                 <td>Approved</td>
+                                 <td><a download="CM AWAS YOJANA Plots Scheme Other Documents"
+                                       href="../pdf/RERA.pdf">Download</a>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>4</td>
+                                 <td>Scheme Site Plan</td>
+                                 <td>Approved</td>
+                                 <td><a download="CM AWAS YOJANA Plots Scheme Site Plan"
+                                       href="../pdf/SitePlan.pdf">Download</a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- <div class="container">
+   <div class="lightzer" style="background: #fff;">
+    <section id="newspaper_advertisement" class="page">
+         <div class="p-3" style="padding: 20px;margin-bottom:20px;">
+            <div class="content text-center">
+               <div class="heading">
+                  <h2>Newspaper Advertisement
+                  </h2>
+                  <h6>( click on image to download newspaper advertisement )</h6>
+                  <hr>
+               </div>
+            </div>
+            <div class="container-fluid">
+               <div class="section-1">
+                  <div class="row" id="newspaper_advertisement-grid">
+                       <div class="col-sm-3 col-xs-6 newspaper_advertisement">
+                        <a download="Newspaper Advertisement Delhi Times" href="/images/advertisement/OZONECITY2/delhi times.pdf">
+                            <img src="/images/advertisement/OZONECITY2/Delhi Times.png" class="img-responsive img-rounded">
+                        </a>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 newspaper_advertisement">
+                        <a download="Newspaper Advertisement Dainik Jagran" href="/images/advertisement/OZONECITY2/dainik jagran.pdf">
+                            <img src="/images/advertisement/OZONECITY2/Dainik Jagran.png" class="img-responsive img-rounded">
+                        </a>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 newspaper_advertisement">
+                        <a download="Newspaper Advertisement Dainik Bhaskar" href="/images/advertisement/OZONECITY2/dainik bhaskar.pdf">
+                            <img src="/images/advertisement/OZONECITY2/Dainik Bhaskar.png" class="img-responsive img-rounded">
+                        </a>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 newspaper_advertisement">
+                        <a download="Newspaper Advertisement Haribhumi" href="/images/advertisement/OZONECITY2/hari bhumi.pdf">
+                            <img src="/images/advertisement/OZONECITY2/Haribhumi.png" class="img-responsive img-rounded">
+                        </a>
+                        </div>
+                        <!-- div class="col-sm-3 col-xs-6 newspaper_advertisement"> -->
+      <!-- <a download="Newspaper Advertisement Dainik Jagran Patna" href="/images/advertisement/SIGNUM95/dainik jagran hindi.pdf">
+                            <img src="/images/advertisement/SIGNUM95/Dainik Jagran Patna.png" class="img-responsive img-rounded">
+                        </a>
+                        </div>
+                    <div class="col-sm-3 col-xs-6 newspaper_advertisement">
+                        <a download="Newspaper Advertisement Dainik Jagran" href="/images/advertisement/SIGNUM95/Newspaper Advertisement DJ oct13.pdf">
+                        <img src="/images/advertisement/SIGNUM95/ad2909 (2).png" class="img-responsive img-rounded">
+                        </a>
+                     </div>
+
+                     <div class="col-sm-3 col-xs-6 newspaper_advertisement">
+                        <a download="Newspaper Advertisement Dainik Bhaskar" href="/images/advertisement/SIGNUM95/Newspaper advertisement DB oct13.pdf">
+                        <img src="/images/advertisement/SIGNUM95/ad2909 (3).png" class="img-responsive img-rounded">
+                        </a>
+                     </div>
+                     <div class="col-sm-3 col-xs-6 newspaper_advertisement">
+                        <a download="Newspaper Advertisement Haribhumi" href="/images/advertisement/SIGNUM95/Newspaper Advertisement HB oct13.pdf">
+                            <img src="/images/advertisement/SIGNUM95/ad2909.png" class="img-responsive img-rounded">
+                        </a>
+                        </div>
+                        
+                        <div class="col-sm-3 col-xs-6 newspaper_advertisement">
+                        <a download="Newspaper Advertisement Amar Aujala" href="/images/advertisement/SIGNUM95/Terra city ad 12 amar ujala.pdf">
+                            <img src="/images/advertisement/SIGNUM95/ad1310.png" class="img-responsive img-rounded">
+                        </a>
+                        </div>
+                        
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+<!-- </div> -->
+      <!-- images crousal -->
+      <div class="container">
+         <div class="lightzer" style="background: #fff;">
+            <section id="profiles" class="page">
+               <div class="p-3" style="padding: 20px;">
+                  <div class="content text-center">
+                     <div class="heading">
+                        <h2>Scheme
+                           Elevation & Plot Layout Plan
+                        </h2>
+                        <hr>
+                     </div>
+                  </div>
+                  <div class="scheme-container">
+                     <div class="col-sm-3 col-xs-6 profile">
+                        <div class="panel panel-default">
+                           <div class="panel-thumbnail">
+                              <a href="#" class="thumb">
+                                 <img src="../assets/3.jpg" class="img-responsive img-rounded" data-toggle="modal"
+                                    data-target=".modal-profile-lg">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-3 col-xs-6 profile">
+                        <div class="panel panel-default">
+                           <div class="panel-thumbnail">
+                              <a href="#" class="thumb">
+                                 <img src="../assets/5.jpg" class="img-responsive img-rounded" data-toggle="modal"
+                                    data-target=".modal-profile-lg">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-3 col-xs-6 profile">
+                        <div class="panel panel-default">
+                           <div class="panel-thumbnail">
+                              <a href="#" class="thumb">
+                                 <img src="../assets/6.png" class="img-responsive img-rounded" data-toggle="modal"
+                                    data-target=".modal-profile-lg">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+               </div>
+         </div>
+      </div>
+   </div>
+   </section>
+   </div>
+   </div>
+   </div>
+   </div>
+   <div class="container" style="position: sticky;bottom: 0;">
+      <div class="lack">
+         <div class="background-white fixed-bottom">
+            <a class="btn btn-primary btn-lg mt-3 w-20 blink_me box" style="font-weight: 600;text-transform:uppercase;"
+               href="./applyForm.html">Apply Now</a>
+         </div>
+      </div>
+   </div>
+   </div>
+   </div>
+   </div>
+   <div class="container-fluid" style="background-color:#303030; padding:15px;">
+      <div class="row">
+         <div class="footer">
+            <ul class="inline">
+               <li><a href="./privacy.html">Terms & Conditions</a></li>
+               <li> <a href="./privacy.html">Privacy Policy</a></li>
+               <li><a href="./privacy.html">Cancellation/Refund</a></li>
+               <li><a href="./contactUs.html">Contact Us</a></li>
+            </ul>
+         </div>
+</body>
+
+</html>

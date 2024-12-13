@@ -1,0 +1,357 @@
+ul.navbar-right li a > i,
+ul.menu li a>i,
+ul.menu li a:hover,
+.dropdown_lavel_2:hover .dropdown-toggle,
+.dropdown_lavel_3:hover .dropdown-toggle,
+.epp-submit .ep-clear-bt:hover,
+.add-close a,
+.auction-price-section .title i,
+.price-section .title i {
+  color: #4285f4 !important;
+}
+.bid-opening-title-custom, .report-section .report-title{
+	background: #4285f4 !important;
+}
+.bid-opening-details-custom {
+	border-color: #4285f4 !important;
+}
+.bid-table-main-title label{
+	color: #4285f4 !important;
+}
+.bidder-name-main > label{
+	color: #4285f4 !important;
+}
+.epf-form_title {
+  color: #4285f4 !important;
+}
+
+*::-moz-selection {
+  background: #4285f4;
+  color: #ffffff;
+}
+
+*::selection {
+  background: #4285f4;
+  color: #ffffff;
+}
+
+.custom-input.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #4285f4 !important;
+}
+
+.search-box .form-control:focus {
+  border-bottom: 1px solid #4285f4 !important;
+  border-top: 1px solid #4285f4 !important;
+  border-left: 1px solid #4285f4 !important;
+  border-right: none !important;
+  border-radius: 0px;
+}
+
+header .small-top-bar, .auc-result-table thead tr>th, .rfx-result-table thead tr>th {
+  background: #4285f4;
+  color: #ffffff;
+}
+
+.tooltip .tooltip-arrow {
+  border-top-color: #4285f4 !important;
+}
+
+.tooltip .tooltip-inner {
+  background-color: #4285f4;
+}
+
+.tooltip-arrow {
+  border-top-color: #4285f4 !important;
+}
+
+.cta-button-base {
+  color: #4285f4;
+  border: 1px solid #4285f4;
+}
+
+.cta-button,
+.tabscroll-tab-active,
+.scroll_tabs_container .scroll_tab_right_button:not(.scroll_arrow_disabled):not(.scroll_tab_right_button_disabled),
+.scroll_tabs_container .scroll_tab_left_button:not(.scroll_arrow_disabled):not(.scroll_tab_left_button_disabled) {
+  background-color: #4285f4 !important;
+  color: #ffffff;
+}
+
+.cta-button:focus,
+.cta-button:active {
+  background: #1266f1;
+  color: #ffffff;
+}
+
+.cta-button-outline {
+  color: #4285f4;
+  border: 1px solid #4285f4;
+}
+
+.cta-button-outline:hover {
+  background: #4285f4;
+  color: #ffffff;
+}
+
+.cta-button-outline:focus,
+.cta-button-outline:active {
+  background: #1266f1;
+}
+
+.pagination-wrapper .pagination-inner .pager-btn {
+  border: 1px solid #4285f4;
+  color: #4285f4;
+}
+
+.pager-btn:hover {
+  color: #ffffff !important;
+  background: #4285f4 !important;
+}
+
+.pager-btn:focus {
+  color: #ffffff !important;
+  background: #1266f1 !important;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 2px solid #4285f4;
+}
+
+div.custom-tabs ul.TabbedPanelsTabGroup .TabbedPanelsTabSelected {
+  border-bottom: 3px solid #4285f4;
+}
+
+div.fp-slider-wrapper .owl-carousel .owl-nav .owl-prev,
+div.fp-slider-wrapper .owl-carousel #customNav .owl-prev,
+div.fp-slider-wrapper .owl-carousel .owl-nav .owl-next,
+div.fp-slider-wrapper .owl-carousel #customNav .owl-next {
+  background: #4285f4;
+  color: #ffffff;
+}
+
+div.marquee-wraper {
+  color: #4285f4;
+}
+
+.eproc-listing-main .brief p a:hover {
+  color: #4285f4;
+}
+
+ul.TabbedPanelsTabGroup .TabbedPanelsTabSelected {
+  background: #4285f4;
+}
+
+.eproc-listing-main .listing-date-info .date-wrapper .remaining-time {
+  border: 1px solid #4285f4;
+  background: transparent;
+  color: #4285f4;
+  font-size: 13px;
+}
+
+#listing-tab-container div.tab-pane>div ul.etabs li.active::after {
+  background: #4285f4;
+}
+
+.eproc-listing-main .listing-date-info .cta-links .list-inline>li.action-list-item a i {
+  font-size: 20px;
+}
+
+.eproc-listing-main .listing-date-info .cta-links .list-inline>li.action-list-item a i::before {
+  color: #4285f4;
+}
+
+.eproc-listing-main .listing-date-info .cta-links .list-inline>li.action-list-item a:hover i {
+  color: #1266f1;
+}
+
+.eproc-listing-main .listing-date-info .cta-links .list-inline>li.action-list-item a:hover i::before {
+  color: #4285f4;
+}
+
+input:focus,
+textarea:focus,
+.dropdown:hover .icon_radius,
+.epnew-content,
+.pager .btn-default:hover,
+.pager .btn-default:hover,
+.ep-clear-bt:hover,
+.form-control:focus,
+.before-login-form1,
+.before-login-form2 {
+  border-color: #4285f4 !important;
+}
+
+.sol-quick-delete {
+  color: #ffffff !important;
+  display: table-cell;
+  font-weight: 400;
+  text-align: center;
+  padding: 3px 5px;
+  vertical-align: top;
+  background: #2a75f3;
+}
+
+.sol-selected-display-item-text {
+  color: #ffffff;
+  background: #3782ff !important;
+  border-top-right-radius: inherit !important;
+  border-bottom-right-radius: inherit !important;
+}
+
+.sol-quick-delete+.sol-selected-display-item-text {
+  padding: 3px 5px !important;
+}
+
+.popover.top>.arrow {
+  bottom: -6px;
+  border-top-color: #4285f4;
+}
+
+.ep-button:hover {
+  background: #72a4f7;
+}
+
+.button:hover,
+.button:focus,
+.btn-primary:active:hover,
+.btn-primary:active {
+  background: #a2c3fa;
+}
+
+.optiondropdown ul li:hover,
+.btn-primary:hover {
+  background-color: #72a4f7;
+}
+
+.sol-selection:not(.sol-keyboard-navigation) .sol-option:hover,
+.sol-option.keyboard-selection {
+  background: #4285f4 !important;
+}
+
+.sol-selection:not(.sol-keyboard-navigation) .sol-option:hover .sol-label-text {
+  color: #ffffff !important;
+}
+
+.sol-checkbox {
+  margin-top: 0 !important;
+}
+
+.daterangepicker td.available {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.daterangepicker td.available:not(.start-date):not(.end-date):hover,
+.daterangepicker th.available:hover {
+  background-color: #cee0ff !important;
+  color: #4185f4 !important;
+  margin-top: 0;
+}
+
+.pagging ul li a.active,
+.ep-button,
+.hvr-underline-from-center:before,
+.button,
+.dropdown:hover .icon_radius,
+.dropdown_lavel_2:hover i.arrow:after,
+.dropdown_lavel_2:hover i.arrow:before,
+.dropdown_lavel_3:hover i.arrow:after,
+.dropdown_lavel_3:hover i.arrow:before,
+.pager .btn-default:hover,
+.popover .popover-title,
+.nav .open>a,
+.daterangepicker td.active,
+.daterangepicker td.active:hover,
+.time-section .button,
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus {
+  background: #4285f4 !important;
+}
+
+.input-group-addon.btn-primary {
+  background: #4285f4 !important;
+  color: #ffffff !important;
+  border-color: transparent;
+}
+
+.dropdown-submenu:hover>a:after {
+  border-left-color: #4285f4;
+}
+.list-group .list-group-item:nth-child(1) {
+    background: #4285f4 !important;
+ 	color: #ffffff !important;
+}
+.list-group .scroll-box .list-group-item {
+    background: #ffffff !important;
+ 	color: #000 !important;
+}
+
+/*==============================================================Product list===========================================================================*/
+/*==================================================================Drop Dowb Menu================================================================================================*/
+.dropdown-menu,
+.dropdown-menu-level2,
+.dropdown-menu-level3 {
+  border-top: 2px solid #4285f4;
+}
+
+.dropdown_lavel_2:hover .dropdown_lavel_3:hover .dropdown-toggle {
+  color: #f00;
+}
+
+.TabbedPanelsTabSelected {
+  border-top-color: #4285f4;
+  color: #4285f4;
+}
+
+.TabbedPanelsTab:hover {
+  border-top: 2px solid #4285f4;
+}
+
+.marquee {
+  border-left: 3px solid #4285f4;
+}
+
+.icon-submition .tablink li a i {
+  color: #2ab4c0 !important;
+}
+
+i.fa-trash {
+  color: #4285f4;
+}
+
+.btn-primary,
+.btn-primary.focus,
+.btn-primary:focus {
+  color: #ffffff;
+  background-color: #4285f4 !important;
+  border-color: #4285f4 !important;
+  outline-offset: 0px !important;
+}
+
+.optiondropdown:hover {
+  background: #4285f4;
+}
+
+.tablink a i:hover {
+  font-size: 15px;
+  color: #2a75f3;
+}
+
+.x-corrig-active>.x-corrig-title {
+  background-color: #4285f4;
+  color: #ffffff;
+}
+
+.range_inputs>.btn-success {
+  background: #4285f4 !important;
+  border: 1px solid #4285f4 !important;
+}
+
+.eproc-listing-main .listing-content .ref-dept .department span>i,
+.date-wrapper .date-icon i.fa {
+  color: #4285f4 !important;
+}

@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+.TabbedPanels {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	clear: none;
+	width: 100%;
+	background: #fff;
+	/* margin-top: 12px;
+    padding-bottom:20px; */
+}
+
+.TabbedPanelsTabGroup {
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+}
+
+.TabbedPanelsTab {
+	position: relative;
+	top: 1px;
+	float: left;
+	margin: 0px 7px 0px 0px;
+	color: #8C8C8C;
+	list-style: none;
+	border-left: solid 1px #eaeaea;
+	border-top: solid 1px #eaeaea;
+	border-right: solid 1px #eaeaea;
+	/* border-radius: 5px 7px 0px 0px; */
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.TabbedPanelsTabHover {
+	color: #000;
+}
+
+.TabbedPanelsTabSelected {
+	background-color: #FFF;
+	border-top: 2px solid #4285f4;
+	color: #4285f4;
+}
+
+.TabbedPanelsTabSelected a {
+	padding: 7px 25px !important;
+	color: #4285f4 !important;
+}
+
+:focus {
+	outline: none;
+}
+
+.TabbedPanelsTab a {
+	color: #4a4a4a;
+	text-decoration: none;
+	padding: 7px 25px;
+	display: inline-block;
+}
+
+.TabbedPanelsTabSelected:hover a {
+	padding-top: 7px !important;
+	padding-bottom: 7px !important;
+}
+
+.TabbedPanelsContentGroup {
+	clear: both;
+	background: #fff;
+	border: 1px solid #eaeaea;
+	border-radius: 0px 5px 5px 5px;
+	/*border-left: solid 1px #CCC;
+	border-bottom: solid 1px #CCC;
+	border-top: solid 1px #999;
+	border-right: solid 1px #999;
+	background-color: #EEE;*/
+}
+
+.TabbedPanelsContent {
+	overflow: hidden;
+	padding: 10px;
+}
+
+.TabbedPanelsContentVisible {
+	
+}
+
+.VTabbedPanels {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.VTabbedPanels .TabbedPanelsTabGroup {
+	float: left;
+	width: 10em;
+	height: 20em;
+	background-color: #EEE;
+	position: relative;
+	border-top: solid 1px #999;
+	border-right: solid 1px #999;
+	border-left: solid 1px #CCC;
+	border-bottom: solid 1px #CCC;
+}
+
+.VTabbedPanels .TabbedPanelsTab {
+	float: none;
+	margin: 0px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.VTabbedPanels .TabbedPanelsTabSelected {
+	background-color: #EEE;
+	border-bottom: solid 1px #999;
+}
+
+.VTabbedPanels .TabbedPanelsContentGroup {
+	clear: none;
+	float: left;
+	padding: 0px;
+	width: 30em;
+	height: 20em;
+}
+
+/* Styles for Printing */
+@media print {
+	.TabbedPanels {
+		overflow: visible !important;
+	}
+	.TabbedPanelsContentGroup {
+		display: block !important;
+		overflow: visible !important;
+		height: auto !important;
+	}
+	.TabbedPanelsContent {
+		overflow: visible !important;
+		display: block !important;
+		clear: both !important;
+	}
+	.TabbedPanelsTab {
+		overflow: visible !important;
+		display: block !important;
+		clear: both !important;
+	}
+}
+
+/*==========================================================Vartical form=============================================================*/
+/*
+.vartical_tab .TabbedPanelsTab{ 
+				float:none;
+				width:100%;
+		}
+	.vartical_tab .TabbedPanelsTab{
+		border-bottom:1px solid #CCC;
+		}
+	.vartical_tab .TabbedPanelsTabGroup {
+		display:inline-block;
+		}
+	.vartical_tab .TabbedPanelsTabSelected{
+		border-bottom: 3px solid #4285f4;
+		}
+	.vartical_tab .TabbedPanelsContentGroup{
+			width:86%;
+			clear:none;
+			float:right;
+			border-radius:0px;
+			position:relative;
+			right:4px;
+			top:1px;
+			} 
+			 .tab-inner-form{padding:10px;}
+			 .tab-inner-form .tablink{
+				 list-style-type:none;
+				 margin:0px; padding:0px;
+				 margin-top:7px;
+				 }
+			 .tab-inner-form .tablink li{ display:inline-block;}
+			 .tab-inner-form .tablink li a{padding: 0px 12px;
+    text-decoration: none;
+    border-right: 1px solid #C7C7C7;}
+	.tab-inner-form .tablink li:last-child a{border-right:none;}
+*/
+@media screen and (max-width: 767px) {
+	.TabbedPanelsTab {
+		padding: 7px 0px;
+		margin: 0px;
+		width: 33.33%;
+	}
+}

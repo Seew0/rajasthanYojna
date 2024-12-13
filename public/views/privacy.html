@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/logo.jpg">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/css/eprocure-icons.css">
+    <link rel="stylesheet" type="text/css" href="/css/responsive-style.css">
+    <link rel="stylesheet" type="text/css" href="/css/spry-tabbed-panels.css">
+    <link rel="stylesheet" type="text/css" href="/css/daterange-picker.css">
+    <link rel="stylesheet" type="text/css" href="/css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style-new.css">
+    <link rel="stylesheet" type="text/css" href="/css/blue.css">
+</head>
+<style>
+    @media only screen and (max-width:600px) {
+        .box-locs {
+            overflow-y: scroll
+        }
+
+        .kata {
+            width: 100%;
+            margin: 0 auto
+        }
+
+        .display-none {
+            display: none !important
+        }
+
+        .sach {
+            position: fixed;
+            top: 90%;
+            left: 5%
+        }
+
+        .kach {
+            background-color: #fff
+        }
+
+        .kach a {
+            width: 90%;
+            z-index: 99
+        }
+
+        .border-right {
+            border-right: none !important
+        }
+
+        .kata {
+            width: 100% !important
+        }
+
+        .small-screen {
+            position: absolute !important;
+            z-index: 1 !important
+        }
+    }
+
+    body {
+        overflow-x: hidden
+    }
+
+    .modal-body img {
+        display: block;
+        margin: 0 auto
+    }
+
+    .blue_table th {
+        text-align: center
+    }
+
+    .blue_table tr td {
+        text-align: center
+    }
+
+    .lack {
+        background: #fff;
+        margin: 0 auto;
+        padding: 11px;
+        margin-top: 10px
+    }
+
+    .kata {
+        width: 100%;
+        margin: 50px auto
+    }
+
+    .gaggu .fa {
+        margin-right: 10px !important
+    }
+
+    .caption {
+        font-weight: 600
+    }
+
+    .text-center {
+        text-align: center !important
+    }
+
+    .table {
+        color: #686868
+    }
+
+    .w-20 {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        margin-top: 20px;
+        width: 100%
+    }
+
+    .form-z {
+        margin-bottom: 50px
+    }
+
+    .prjt-title {
+        padding: 20px 0
+    }
+
+    .box-content {
+        border: 1px solid #efefef;
+        border-radius: 5px;
+        padding: 30px
+    }
+
+    .start-content {
+        text-transform: uppercase
+    }
+
+    .padding-30px {
+        padding: 30px
+    }
+
+    .tabs {
+        background: 0 0 !important
+    }
+
+    .active a {
+        border-bottom: 3px solid #4285f4 !important;
+        border-top: none !important
+    }
+
+    .gaggu li {
+        list-style: none;
+        line-height: 2.5em;
+        font-size: 13px
+    }
+
+    .display-inline-b {
+        display: inline-block !important;
+        margin-right: 50px !important
+    }
+
+    .gaggu li a {
+        border: none !important
+    }
+
+    .border-right {
+        border-right: 1px solid #e3e3e3
+    }
+
+    .inner-content {
+        box-shadow: 1px 1px 8px rgb(0 0 0 / 41%);
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 60px
+    }
+
+    .fa {
+        color: #4285f4 !important
+    }
+
+    .inline {
+        padding: 0
+    }
+
+    .inline li {
+        display: inline;
+        list-style: none;
+        padding: 5px;
+        color: #e3e3e3
+    }
+
+    .inline li a {
+        color: #909090
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        text-align: center
+    }
+
+    .button-primary {
+        color: #fff;
+        background-color: #4285f4 !important;
+        border-color: #4285f4 !important;
+        outline-offset: 0 !important
+    }
+
+    .kata {
+        width: 50%
+    }
+
+    select {
+        background: #fff
+    }
+
+    .checkbox-col {
+        display: flex;
+        justify-content: space-between
+    }
+
+    .lsts {
+        list-style: decimal;
+        line-height: 2em
+    }
+
+    .lsts li {
+        margin-bottom: 5px
+    }
+</style>
+
+<style>
+    .kaka {
+        font-weight: 800;
+    }
+
+    .mt-3 {
+        margin-top: 10px;
+    }
+
+    .blinked {
+        animation: blinker 1s linear infinite;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="small-top-bar" style="background:#e6908d">
+            <div class="container">
+                <div class="pull-left"></div>
+                <div class="pull-right"><span>-</span></div>
+            </div>
+        </div>
+        <div class="container navbar-wrapper-main">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav class="navbar">
+                        <div class="navigation-bar-wrap">
+                            <div class="nav-logo mr-auto">
+                                <div class="logo-client" id="xSiteLogoImgDiv"><a class="client-logo-wrapper"
+                                        href="/"><img id="xSiteLogoImg" src="../assets/logo.jpg"
+                                            class="single-client-logo"></a></div>
+                            </div>
+                            <div class="collapse navbar-collapse w-100 small-screen" id="myNavbar">
+                                <ul class="menu">
+                                    <li class="hvr-underline-from-center"><a href="/">🏠︎ Home</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="x-min-height before-login-container">
+        <div class="container">
+            <div class="row">
+                <div class="card" style="background: #fff;padding:30px; margin:30px;">
+
+                    <div class="section-title-s2">
+                        <h3><strong>Privacy Policy:-</strong></h3>
+                        <br><br>
+                        <h6>Please Read Booking Privacy Policy</h6>
+
+                        <br>
+                        <p> TERRA CASTLE project is licensed under
+                            <strong>TERRA REALCON Private Limited</strong>
+                            , TERRA REALCON Private Limited is committed to maintain the privacy and accuracy of
+                            information that has been provided on this site. Appropriate measures have been taken to
+                            ensure that all information which has been provided is not misused, accidentally destroyed
+                            or lost within the environment of Terra Group. The information we get is purely to determine
+                            our site traffic. Although, care has been taken in the production of information on this
+                            website, Terra Group will not be responsible and accept any liability for loss incurred in
+                            anyway whatsoever, by any person who may seek to rely on the information contained herein.
+                            Terms and Conditions
+
+                        </p><br>
+                        <br>
+
+                        <h3><strong>Terms and Conditions:-</strong></h3>
+
+                        <p>As per Affordable Residential Housing Scheme under Rajasthan Jan Awas Yojana 2015 Policy. All
+                            non-successful applicants, shall be refunded back the booking amount within 30 days of
+                            holding the draw of lots.
+                        </p><br>
+
+
+
+                        <p>Once the applications relating to allotment of flats in the Project, are received by the
+                            Company, the same shall be scrutinized. Scrutiny of applications shall be completed by the
+                            Company. Applications found to be ineligible shall be returned alongwith the Registration
+                            Amount (Rs. 21,000/-) received from such applicants. No interest shall be paid in such
+                            cases.
+
+                        </p><br>
+
+
+
+                        <p>Allotment of flats in the Project shall be made by way of draw of lots.
+
+                        </p><br>
+
+
+
+                        <p>Upto 5% of the total number of flats as approved in the site layout plans may be allotted by
+                            the Company to its employees/associates/friends/relatives etc.
+
+                        </p><br>
+
+
+                        <p>Only such Applications shall be considered for draw of lots which are complete. The list of
+                            such successful allottees shall also be published on this website.
+
+                        </p><br>
+
+                        <h3><strong>Cancellation and Refunds:-</strong></h3>
+
+                        <p>A waiting list shall also be prepared during the draw of lots who can be offered the
+                            allotment in case some of the successful allottees are not able to provide documents as per
+                            the scheme published in the advertisement. All waiting and non-successful applicants shall
+                            be refunded back the Booking Amount within 45 days of holding the draw of lots.
+
+                        </p><br>
+
+                        <p>Only such Applications shall be considered for draw of lots which are complete and which
+                            fulfill the criteria given under the scheme published.
+
+                        </p><br>
+
+                        <p>For project related specific queries, you may see ad published (attached here with also on <a
+                                href="./projectScheme.html"> Click
+                            </a>)
+                            inviting application from prospective allottees.</p><br>
+
+
+                    </div>
+
+                </diV>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    </div>
+    <div class="container-fluid" style="background-color:#303030; padding:15px;">
+        <div class="row">
+            <div class="footer">
+                <ul class="inline">
+                    <li><a href="./privacy.html">Terms & Conditions</a></li>
+                    <li> <a href="./privacy.html">Privacy Policy</a></li>
+                    <li><a href="./privacy.html">Cancellation/Refund</a></li>
+                    <li><a href="./contactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Modal -->
+            <div id="howtopapply" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content" style="z-index: 1;position:absolute">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">How To Apply</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                            <ul class="lsts">
+                                <li> Choose the project from the 'LIVE' on the home page</li>
+                                <li> Click on 'Project Scheme Details'</li>
+                                <li> Check all the approvals, licences, layouts, floor plans, location and other
+                                    specifications of the selected project</li>
+                                <li> Click on 'Apply Online'</li>
+                                <li> Fill the form completely and click on 'Submit and Pay' at the bottom of the form
+                                </li>
+                                <li> You will be taken to the payment page, where you need to fill in some details and
+                                    need
+                                    to select the mode of payment from the available options as per your preference.
+                                    Then
+                                    click 'Make Payment', enter OTP and your registration is done</li>
+                                <li> You will get the registration confirmation and application number via text/email
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <footer>
+            <div class="copyright">
+                <div class="container" id="footerCopyrightContainer">
+                    <div id="footerID">
+                        <a href="/tcp-dms/xcommon/terms-conditions" target="_blank">Terms and conditions </a> |
+                        <a href="/tcp-dms/xcommon/privacy-policies" target="_blank">Privacy Policy</a> |
+                        <span class="project-version">v2.6.5.11</span> |
+                        <a href="#" onclick="event.preventDefault()" class="underline-link" data-toggle="modal"
+                            data-target="#myModalBrowser">Supported Browsers</a> <br>
+                        <a href="/tcp-dms/xcommon/system-requirements" class="underline-link">System Requirements</a>
+                    </div>
+                    <div class="d-flex">
+                        <div class="visitors">Visitors : 456549</div>
+                        &nbsp;|&nbsp;
+                        <div id="copyrightID"></div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModalBrowser" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title text-dark-gray">Supported Browsers</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Chrome: 58.x Or Above, Firefox: 57.x Or Above, Internet Explorer: 11 Or Above</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+        </div>
+    </div>
+</body>
+
+</html>

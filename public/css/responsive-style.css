@@ -1,0 +1,248 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (max-width: 991px) {
+	.nav>li>a {
+		padding: 10px 10px;
+		font-size: 13px;
+	}
+	.resizrform {
+		max-width: 100%;
+	}
+	ul.menu li a {
+		padding: 24px 15px;
+	}
+	ul.dropdown-menu li a {
+		padding: 10px 15px;
+	}
+	.dropdown-menu {
+		left: -50px;
+	}
+	.navbar {
+		margin-bottom: 0px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/*	==============================Home Page=========================================*/
+	.siderbar_section, .advance-search {
+		display: none;
+	}
+	.form-horizontal .form-group {
+		padding: 0px 0px;
+		margin: 10px auto;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.small_header span {
+		padding: 0px 0px;
+		position: static;
+		top: 0px;
+		left: 0px;
+	}
+	/* header {
+		height: auto;
+	} */
+	.logo {
+		width: 100%;
+		margin-left: 0px;
+	}
+	.logo img {
+		width: 131px;
+	}
+	.margin-left30 {
+		margin-left: 0px;
+	}
+	.navbar-toggle {
+		margin: 0px;
+		margin-top: 5px;
+		/* position: absolute; */
+		right: 0px;
+	}
+	ul.menu li {
+		display: block;
+		border-bottom: 1px solid #E6E6E6;
+	}
+	ul.menu, ul.menu li a {
+		width: 100%;
+		background: #fff;
+	}
+	ul.menu {
+		margin-top: 13px;
+	}
+	.navbar-collapse.in {
+		overflow: visible
+	}
+	ul.menu li a {
+		padding: 16px 25px;
+	}
+	ul.menu li a:hover, ul.menu li.active a {
+		color: #FFFFFF;
+		/* background: #337AB7; */
+	}
+	.search {
+		padding: 0px;
+	}
+	.optiondropdown {
+		width: 25%;
+	}
+	.optiondropdown .new {
+		font-size: 13px;
+		padding: 6px;
+	}
+	.arrow:before, .arrow:after {
+		right: 5px;
+		background: #ADADAD;
+		width: 7px;
+	}
+	.arrow:before {
+		top: 16px;
+	}
+	.arrow:after {
+		bottom: 15px;
+	}
+	.input-search input {
+		/*  left: 25%;*/
+		width: 68%;
+	}
+	.input-search .ep-button {
+		position: absolute;
+		right: 0px;
+		padding: 7px 10px;
+		left: none;
+	}
+	.search {
+		height: 33px;
+	}
+	.TabbedPanelsTab {
+		padding: 6px 25px;
+		margin: 0px;
+		padding: 6px 25px;
+		margin: 0px;
+		width: 33.33%;
+		text-align: center;
+	}
+	.list-col-full {
+		padding: 0px;
+	}
+	.TabbedPanelsTabSelected {
+		background: none;
+	}
+	.eep_Product_listing p {
+		font-size: 13px;
+		text-align: justify;
+	}
+	.list-col1, .list-col2, .list-col3 {
+		width: 100%;
+		padding-left: 0px;
+	}
+	.paging {
+		width: 80%;
+	}
+	.pager li>a, .pager li>span {
+		padding: 5px 8px;
+	}
+	.xs-btn-block {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.ep-form-description {
+		padding: 0px 0px;
+	}
+	.go-back {
+		margin-top: 12px;
+	}
+	h3, .h3 {
+		font-size: 18px;
+	}
+	.floatright {
+		float: none;
+	}
+	hr.clear-both {
+		display: none;
+	}
+	.form-body .form-group .control-label {
+		padding-right: 15px;
+	}
+	.login-form-control {
+		border: none;
+	}
+	.form {
+		padding: 15px 15px;
+		margin: 40px auto;
+	}
+	.tablink li a {
+		font-size: 12px;
+	}
+	.login-desc {
+		margin-top: 20px;
+	}
+	.f-single-colum .ep-button {
+		margin-left: 0px;
+	}
+	.right_side {
+		float: none;
+	}
+	.navbar-collapse {
+		margin-top: 45px;
+	}
+	.dropdown-menu {
+		padding-left: 0px !important;
+	}
+	.navbar-nav .open .dropdown-menu>li>a, .navbar-nav .open .dropdown-menu .dropdown-header
+		{
+		padding: 10px 20px;
+	}
+	.nav>li {
+		border-bottom: 1px solid #e2e1e1;
+	}
+	.navbar-nav {
+		display: inline;
+	}
+	.navbar-default .navbar-brand {
+		display: inline;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+	.navbar-default .navbar-nav .dropdown-menu>li>a {
+		color: red;
+		background-color: #ccc;
+		border-radius: 4px;
+		margin-top: 2px;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+		color: #333;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+		.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+		background-color: #ccc;
+	}
+	.navbar-nav .open .dropdown-menu {
+		border-bottom: 1px solid white;
+		border-radius: 0;
+	}
+	.dropdown-menu {
+		padding-left: 10px;
+	}
+	.dropdown-menu .dropdown-menu {
+		padding-left: 20px;
+	}
+	.dropdown-menu .dropdown-menu .dropdown-menu {
+		padding-left: 30px;
+	}
+	li.dropdown.open {
+		border: 0px solid red;
+	}
+
+	/*==============================End Home Page=======================================*/
+}
+
+@media ( min-width : 768px) {
+	.navbar-nav>li>a {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	ul.nav li:hover>ul.dropdown-menu {
+		display: block;
+	}
+}
