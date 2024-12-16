@@ -12,10 +12,18 @@
    <link rel="stylesheet" type="text/css" href="/css/responsive-style.css">
    <link rel="stylesheet" type="text/css" href="/css/spry-tabbed-panels.css">
    <link rel="stylesheet" type="text/css" href="/css/daterange-picker.css">
+   <title>Apply</title>
    <link rel="stylesheet" type="text/css" href="/css/easyui.css">
    <link rel="stylesheet" type="text/css" href="/css/style.css">
    <link rel="stylesheet" type="text/css" href="/css/style-new.css">
    <link rel="stylesheet" type="text/css" href="/css/blue.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Include jQuery and Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
 </head>
 <style>
    @media only screen and (max-width:600px) {
@@ -267,7 +275,39 @@
                      </div>
                      <div class="collapse navbar-collapse w-100 small-screen" id="myNavbar">
                         <ul class="menu">
-                           <li class="hvr-underline-from-center"><a href="/">🏠︎ Home</a></li>
+                           <li class="hvr-underline-from-center"><a href="/"><i aria-hidden="true"></i>🏠︎Home</a></li>
+                           <li class="hvr-underline-from-center">
+                              <a href="#" data-toggle="modal" data-target="#howtopapply">
+                                 ⦿ How To Apply
+                              </a>
+                           </li>
+                           
+                           <div id="howtopapply" class="modal fade" role="dialog">
+                              <div class="modal-dialog">
+                                 <!-- Modal content-->
+                                 <div class="modal-content">
+                                    <div class="modal-header">
+                                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                       <h4 class="modal-title">How To Apply</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                       <ul class="lsts">
+                                          <li>Choose the project from the 'LIVE' on the home page</li>
+                                          <li>Click on 'Project Scheme Details'</li>
+                                          <li>Check all the approvals, licences, layouts, floor plans, location, and other specifications of the selected project</li>
+                                          <li>Click on 'Apply Online'</li>
+                                          <li>Fill the form completely and click on 'Submit and Pay' at the bottom of the form</li>
+                                          <li>You will be taken to the payment page, where you need to fill in some details and need to select the mode of payment from the available options as per your preference. Then click 'Make Payment', enter OTP, and your registration is done</li>
+                                          <li>You will get the registration confirmation and application number via text/email</li>
+                                       </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           
                         </ul>
                      </div>
                   </div>
@@ -280,7 +320,7 @@
       <div class="container">
          <div class="">
             <form class="kata" id="registrationForm" method="POST">
-               <h3>FORM</h3>
+               <h3>APPLICATION FORM</h3>
                <input type="hidden" name="amount" value="1.00">
                <input type="hidden" name="currency" value="INR">
                <input type="hidden" name="tid" id="tid" readonly value="1681930193668">
@@ -504,6 +544,7 @@
                         // Handle success (e.g., show a success message, redirect, etc.)
                         alert("Form submitted successfully");
                         console.log('Form submitted successfully:', result);
+                        window.location.href = "/views/thankyou.html";
                      } else {
                         // Handle error (e.g., show an error message)
                         console.error('Form submission failed:', result);
