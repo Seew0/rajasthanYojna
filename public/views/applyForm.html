@@ -17,13 +17,13 @@
    <link rel="stylesheet" type="text/css" href="/css/style.css">
    <link rel="stylesheet" type="text/css" href="/css/style-new.css">
    <link rel="stylesheet" type="text/css" href="/css/blue.css">
-    <!-- Include Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <!-- Include Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- Include jQuery and Bootstrap JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
- 
+   <!-- Include jQuery and Bootstrap JavaScript -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <style>
    @media only screen and (max-width:600px) {
@@ -258,7 +258,7 @@
 
 <body>
    <header>
-      <div class="small-top-bar" style="background:#e6908d">
+      <div class="small-top-bar" style="background:#4285f4">
          <div class="container">
             <div class="pull-left"></div>
             <div class="pull-right"><span>-</span></div>
@@ -281,7 +281,7 @@
                                  ⦿ How To Apply
                               </a>
                            </li>
-                           
+
                            <div id="howtopapply" class="modal fade" role="dialog">
                               <div class="modal-dialog">
                                  <!-- Modal content-->
@@ -294,11 +294,17 @@
                                        <ul class="lsts">
                                           <li>Choose the project from the 'LIVE' on the home page</li>
                                           <li>Click on 'Project Scheme Details'</li>
-                                          <li>Check all the approvals, licences, layouts, floor plans, location, and other specifications of the selected project</li>
+                                          <li>Check all the approvals, licences, layouts, floor plans, location, and
+                                             other specifications of the selected project</li>
                                           <li>Click on 'Apply Online'</li>
-                                          <li>Fill the form completely and click on 'Submit and Pay' at the bottom of the form</li>
-                                          <li>You will be taken to the payment page, where you need to fill in some details and need to select the mode of payment from the available options as per your preference. Then click 'Make Payment', enter OTP, and your registration is done</li>
-                                          <li>You will get the registration confirmation and application number via text/email</li>
+                                          <li>Fill the form completely and click on 'Submit and Pay' at the bottom of
+                                             the form</li>
+                                          <li>You will be taken to the payment page, where you need to fill in some
+                                             details and need to select the mode of payment from the available options
+                                             as per your preference. Then click 'Make Payment', enter OTP, and your
+                                             registration is done</li>
+                                          <li>You will get the registration confirmation and application number via
+                                             text/email</li>
                                        </ul>
                                     </div>
                                     <div class="modal-footer">
@@ -307,7 +313,7 @@
                                  </div>
                               </div>
                            </div>
-                           
+
                         </ul>
                      </div>
                   </div>
@@ -467,7 +473,7 @@
                            <input type="checkbox" class="btn data-color" tabindex="7" required>
                         </span>
                         <p>By clicking the checkbox, you agree to the
-                           <a target="_blank" href="./privacy.html">Shipping Policy</a> and
+                           <a target="_blank" href="./shippingPolicy.html">Shipping Policy</a> and
                            <a target="_blank" href="./contactUs.html">Contact Us</a>.
                         </p>
                      </div>
@@ -481,93 +487,10 @@
       </div>
 
       <script>
-         var options = {
-            "key": 'rzp_test_H4EEHztWJP2gpn', // Enter the Key ID generated from the Dashboard
-            "amount": 2100000,
-            "currency": "INR",
-            "description": "Acme Corp",
-            "image": "./assets/img/logo.png",
-            config: {
-               display: {
-                  blocks: {
-                     banks: {
-                        name: 'Most Used Methods',
-                        instruments: [
-                           {
-                              method: 'wallet',
-                              wallets: ['freecharge'] 
-                           },
-                           {
-                              method: 'upi'
-                           },
-                        ],
-                     },
-                  },
-                  sequence: ['block.banks'],
-                  preferences: {
-                     show_default_blocks: true,
-                  },
-               },
-            },
-            "handler": function (response) {
-               alert("payment completed");
-               (async () => {
-                  // Get the form element explicitly
-                  const formElement = document.getElementById('registrationForm');
-
-                  // Ensure the form exists
-                  if (!formElement) {
-                     console.error('Form element not found');
-                     return;
-                  }
-
-                  const formData = new FormData(formElement);
-
-                  // Convert FormData to a plain object
-                  const formObject = {};
-                  formData.forEach((value, key) => {
-                     formObject[key] = value;
-                  });
-
-                  try {
-                     const response = await fetch('http://localhost:3000/api/form/addData', {
-                        method: 'POST',
-                        headers: {
-                           'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(formObject),
-                     });
-
-                     const result = await response.json();
-
-                     if (response.ok) {
-                        // Handle success (e.g., show a success message, redirect, etc.)
-                        alert("Form submitted successfully");
-                        console.log('Form submitted successfully:', result);
-                        window.location.href = "/views/thankyou.html";
-                     } else {
-                        // Handle error (e.g., show an error message)
-                        console.error('Form submission failed:', result);
-                     }
-                  } catch (error) {
-                     console.error('Error during form submission:', error);
-                  }
-               })();
-            },
-            "modal": {
-               "ondismiss": function () {
-                  if (confirm("Are you sure, you want to close the form?")) {
-                     console.log("Checkout form closed by the user");
-                  } else {
-                     console.log("Complete the Payment");
-                  }
-               }
-            }
-         };
-         
          document.getElementById('registrationForm').addEventListener('submit', async function (event) {
-            event.preventDefault();
-            // Prevent the default form submission
+            event.preventDefault(); // Prevent the default form submission
+
+            // Collect form data
             const formData = new FormData(this);
 
             // Convert FormData to a plain object
@@ -576,22 +499,27 @@
                formObject[key] = value;
             });
 
-            const response = await fetch('http://localhost:3000/api/form/checkDuplicacy', {
-               method: 'POST',
-               headers: {
-                  'Content-Type': 'application/json',
-               },
-               body: JSON.stringify(formObject),
-            });
+            // Send a POST request to the API
+            try {
 
-            const result = await response.json();
+               const response = await fetch('http://localhost:3000/api/form/addData', {
+                  method: 'POST',
+                  headers: {
+                     'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(formObject),
+               });
 
-            if (response.status === 500) {
-               console.log('Duplicate Entry:', result);
-               alert("Applicants can use Emails, PhoneNumber and Aadhaar Card Number only once");
-            } else if (response.status === 200) {
-               var rzp = new Razorpay(options);
-               rzp.open();
+               const result = await response.json();
+
+               if (response.ok) {
+                  alert('Form submitted successfully');
+                  window.location.href = "https://razorpay.me/@terrarealconpvtltdacterracast"
+               } else {
+                  alert('Form submission failed');
+               }
+            } catch (error) {
+               console.error('Error during submission:', error);
             }
          });
       </script>
