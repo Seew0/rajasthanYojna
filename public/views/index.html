@@ -14,7 +14,7 @@
 </head>
 
 <style>
-    @media only screen and (max-width:600px) {
+   @media only screen and (max-width:600px) {
       .box-locs {
          overflow-y: scroll
       }
@@ -253,7 +253,7 @@
       margin-bottom: 5px
    }
 
-   .bodyfull{
+   .bodyfull {
       margin-top: 2%;
       transform: scale(1.10);
    }
@@ -308,13 +308,16 @@
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       /* Optional: Shadow for aesthetics */
    }
-   .mw{
+
+   .mw {
       background-color: #fff;
    }
-   .mt{
+
+   .mt {
       color: #4285f4;
    }
-   .inner-content{
+
+   .inner-content {
       background-color: #fff;
    }
 </style>
@@ -338,13 +341,13 @@
                      </div>
                      <div class="collapse navbar-collapse w-100 small-screen" id="myNavbar">
                         <ul class="menu">
-                           <li class="hvr-underline-from-center"><a href="/"><i aria-hidden="true"></i>🏠︎Home</a></li>
+                           <li class="hvr-underline-from-center"><a href="/"><i aria-hidden="true"></i>🏠︎ Home</a></li>
                            <li class="hvr-underline-from-center">
                               <a href="#" data-toggle="modal" data-target="#howtopapply">
-                                 ⦿ How To Apply
+                                 👤 How To Apply
                               </a>
                            </li>
-                           
+
                            <div id="howtopapply" class="modal fade" role="dialog">
                               <div class="modal-dialog">
                                  <!-- Modal content-->
@@ -357,11 +360,17 @@
                                        <ul class="lsts">
                                           <li>Choose the project from the 'LIVE' on the home page</li>
                                           <li>Click on 'Project Scheme Details'</li>
-                                          <li>Check all the approvals, licences, layouts, floor plans, location, and other specifications of the selected project</li>
+                                          <li>Check all the approvals, licences, layouts, floor plans, location, and
+                                             other specifications of the selected project</li>
                                           <li>Click on 'Apply Online'</li>
-                                          <li>Fill the form completely and click on 'Submit and Pay' at the bottom of the form</li>
-                                          <li>You will be taken to the payment page, where you need to fill in some details and need to select the mode of payment from the available options as per your preference. Then click 'Make Payment', enter OTP, and your registration is done</li>
-                                          <li>You will get the registration confirmation and application number via text/email</li>
+                                          <li>Fill the form completely and click on 'Submit and Pay' at the bottom of
+                                             the form</li>
+                                          <li>You will be taken to the payment page, where you need to fill in some
+                                             details and need to select the mode of payment from the available options
+                                             as per your preference. Then click 'Make Payment', enter OTP, and your
+                                             registration is done</li>
+                                          <li>You will get the registration confirmation and application number via
+                                             text/email</li>
                                        </ul>
                                     </div>
                                     <div class="modal-footer">
@@ -370,7 +379,7 @@
                                  </div>
                               </div>
                            </div>
-                           
+
                         </ul>
                      </div>
                   </div>
@@ -379,7 +388,7 @@
          </div>
       </div>
    </header>
-     <section class="bodyfull">
+   <section class="bodyfull">
       <div class="x-min-height before-login-container">
          <div class="container">
             <div class="row">
@@ -394,7 +403,8 @@
                                  जनआवास
                                  योजना के अंतर्गत अपना फ्लैट बुक करें!! 33% कोटा महिलाओं एवं सरकारी कर्मचारियों के लिए
                                  आरक्षित है *** UNIT ALLOTMENT DATE - REFER PROJECT ID *** LAST DATE OF APPLICATION -
-                                 REFER PROJECT ID *** REGISTRATION AMOUNT IS FULLY REFUNDABLE TO NON ALLOTTEES WITHIN 30 DAYS.</span>
+                                 REFER PROJECT ID *** REGISTRATION AMOUNT IS FULLY REFUNDABLE TO NON ALLOTTEES WITHIN 30
+                                 DAYS.</span>
                            </marquee>
                         </div>
                      </div>
@@ -608,7 +618,7 @@
 
          // Make an API call to check the status
          $.ajax({
-            url: 'http://localhost:3000/api/form/getStatus',  // Add protocol (http://)
+            url: 'https://rajasthanjanawasyojana.com/api/form/getStatus',  // Add protocol (http://)
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ adhaarNo: aadhar }),
